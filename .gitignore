@@ -1,0 +1,12 @@
+# 教本 PDF 有版权，不放进仓库
+*.pdf
+
+# 部署用的副本（由 index.html、css、js、img 复制而来）
+dist/
+
+.DS_Store
+.netlify/
+node_modules/
+
+# 本机的预览设定（含本机路径）
+.claude/

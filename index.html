@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>攀岩动作实验室</title>
+<link rel="icon" type="image/png" sizes="32x32" href="img/favicon-32.png">
+<link rel="icon" type="image/png" sizes="192x192" href="img/icon-192.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<header class="top">
+  <div class="brand">
+    <img class="logo" src="img/icon-192.png" alt="" width="34" height="34">
+    <div><b>攀岩动作实验室</b><small>依照《攀岩技术教本》的教学方式制作</small></div>
+  </div>
+  <nav class="tabs" id="tabs">
+    <button data-mode="learn">课程</button>
+    <button data-mode="lab">实验室</button>
+    <button data-mode="challenge">挑战</button>
+    <button data-mode="guide">图鉴</button>
+  </nav>
+</header>
+
+<main class="layout">
+  <aside class="list" id="list"></aside>
+
+  <section class="center">
+    <div class="stage" id="stageBox">
+      <svg id="stage" viewBox="0 0 320 300" role="img" aria-label="攀岩墙与攀岩者">
+        <defs>
+          <linearGradient id="wallGrad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0" stop-color="#e3eff3"/><stop offset="1" stop-color="#cfe2e9"/>
+          </linearGradient>
+          <marker id="arrowRed" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="3" markerHeight="3" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e03131"/></marker>
+          <marker id="arrowRedS" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#e03131"/></marker>
+          <marker id="arrowBlue" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#1c7ed6"/></marker>
+          <marker id="arrow_blue" viewBox="0 0 10 10" refX="4" refY="5" markerWidth="2.6" markerHeight="2.6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#1c7ed6"/></marker>
+          <marker id="arrow_red" viewBox="0 0 10 10" refX="4" refY="5" markerWidth="2.6" markerHeight="2.6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e03131"/></marker>
+          <marker id="arrow_green" viewBox="0 0 10 10" refX="4" refY="5" markerWidth="2.6" markerHeight="2.6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#2f9e44"/></marker>
+          <marker id="arrow_orange" viewBox="0 0 10 10" refX="4" refY="5" markerWidth="2.6" markerHeight="2.6" orient="auto"><path d="M0 0L10 5L0 10z" fill="#f08c00"/></marker>
+          <marker id="tick" viewBox="0 0 4 10" refX="2" refY="5" markerWidth="2" markerHeight="5" orient="auto"><path d="M2 0V10" stroke="#343a40" stroke-width="1.5"/></marker>
+        </defs>
+        <g id="scene"></g>
+      </svg>
+      <div class="inset" id="inset">
+        <div class="inset-title">侧面看</div>
+        <svg id="side" viewBox="0 0 160 150">
+          <defs>
+            <marker id="arrowRedS2" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="4" markerHeight="4" orient="auto"><path d="M0 0L10 5L0 10z" fill="#e03131"/></marker>
+          </defs>
+          <g id="sideScene"></g>
+        </svg>
+      </div>
+      <div class="hud" id="hud" hidden><div>蓄力 <i><b id="hudC"></b></i></div><div>速度 <i class="v"><span></span><b id="hudV"></b></i></div></div>
+      <div class="badge" id="badge" hidden></div>
+      <div class="chip" id="chip"></div>
+      <div class="modal" id="modal" hidden></div>
+    </div>
+    <div class="guide-view" id="guideView" hidden></div>
+    <div class="caption" id="caption"></div>
+    <div class="controls" id="controls"></div>
+  </section>
+
+  <aside class="panel" id="panel"></aside>
+</main>
+
+<script src="js/engine.js"></script>
+<script src="js/lessons.js"></script>
+<script src="js/lessons2.js"></script>
+<script src="js/lessons3.js"></script>
+<script src="js/coach.js"></script>
+<script src="js/guide.js"></script>
+<script src="js/render.js"></script>
+<script src="js/app.js"></script>
+</body>
+</html>
